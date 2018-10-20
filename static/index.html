@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Spotube</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" 
+          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	
+	 <link href="./css/bootstrap.min.css" rel="stylesheet">
+	 
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css"
+          integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+    <style type="text/css">
+       .text-hidden {
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+       }
+
+       .text-shown {
+          word-wrap: break-word;
+       }
+	   
+	   body {
+		background-color: darkgray;
+		background-image: url("MusicBackground.jpg");
+		padding-top: 10rem;
+	   }
+	   
+		.starter-template {
+		width: 50%;
+		margin: 0 auto;
+		padding: 3rem 1.5rem;
+		text-align: center;
+		}
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="#">Spotube</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+        </ul>
+		<form class="form-inline my-2 my-lg-0" id="loginForm">
+                        <div class="form-group">
+                            <input type="text" class="form-control mr-sm-2" id="exampleInputEmail1" placeholder="username"
+                                   required name="username">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control mr-sm-2" id="exampleInputPassword1"
+                                   placeholder="password" required name="password">
+                        </div>
+                        <button type="submit" class="btn btn-outline-success my-2 my-sm-0" id="loginButton">login</button>
+                        <button type="button" class="btn btn-outline-success my-2 my-sm-0" id="logoutButton">logout</button>
+        </form>
+      </div>
+    </nav>
+
+<div class="container">
+
+    <div class="row">
+			<div class="col-md-12">
+				<div class="starter-template">
+                    <form id="submitPlaylist">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="Playlist" placeholder="playlist link"
+                                   required name="playlist link">
+                        </div>
+                        <button type="submit" class="btn btn-default">Submit playlist</button>
+                    </form>
+                </div>
+			</div>
+    </div>
+</div>
+
+<div class="modal fade" tabindex="-1" role="dialog" id="loginErrorModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Login unsuccessful</h4>
+            </div>
+            <div class="modal-body"></div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+        integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+        crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>		
+<script src="js/client.js"></script>
+</body>
+</html>
